@@ -1,0 +1,83 @@
+
+.Registration {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.logo {
+    top: 20px; 
+    left: 20px; 
+    width: 300px;
+    height: auto;
+    z-index: 2; 
+}
+
+.Registration h2 {
+    text-align: center;
+    z-index: 1; 
+}
+
+.Registration h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input,
+select { 
+    width: calc(100% - 22px); 
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; 
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+button {
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@media screen and (max-width: 1000px) {
+    .logo {
+        width: 300px; 
+    }
+
+    .Registration {
+        padding: 10px;
+    }
+
+    label,input, select, button, .errors {
+        font-size: 14px;
+    }
+}

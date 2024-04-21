@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./Registration.css";
-import logo from '../../logo.png'; 
-
+import logo from "../../logo.png";
+import { auth, db, firebaseApp } from "../../firebase";
+import { set, ref } from "firebase/database";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 function Registration() {
   const [email, setEmail] = useState("");
@@ -64,17 +66,53 @@ function Registration() {
     return Object.keys(errors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const isValid = validateForm();
     if (isValid) {
-      // TODO Submit
+      try {
+        const auth = getAuth();
+        const userCredential = await createUserWithEmailAndPassword(
+          auth,
+          email,
+          password
+        );
+        const user = userCredential.user;
+
+        console.log("User registered successfully:", user);
+
+        // Save user registration data to the database
+        await set(ref(db, "users/" + user.uid), {
+          email: email,
+          name: name,
+          surname: surname,
+          course: course,
+          semester: semester,
+          studyMode: studyMode,
+        });
+
+        console.log("User data saved to database");
+
+        // Clear form fields and errors
+        setEmail("");
+        setPassword("");
+        setConfirmPassword("");
+        setName("");
+        setSurname("");
+        setCourse("");
+        setSemester("");
+        setStudyMode("");
+        setErrors({});
+      } catch (error) {
+        console.error("Error registering user:", error.message);
+        setErrors({ submit: error.message });
+      }
     }
   };
 
   return (
     <div className="Registration">
-        <img src={logo} alt="Logo" className="logo" />
+      <img src={logo} alt="Logo" className="logo" />
       <h2>Zarejestruj się</h2>
       <div>
         <label>Adres Email</label>

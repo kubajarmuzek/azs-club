@@ -81,7 +81,6 @@ function Registration() {
 
         console.log("User registered successfully:", user);
 
-        // Save user registration data to the database
         await set(ref(db, "users/" + user.uid), {
           email: email,
           name: name,
@@ -93,7 +92,6 @@ function Registration() {
 
         console.log("User data saved to database");
 
-        // Clear form fields and errors
         setEmail("");
         setPassword("");
         setConfirmPassword("");

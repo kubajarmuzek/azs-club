@@ -30,7 +30,7 @@
     margin-bottom: 20px;
 }
 
-label {
+.Registration div label {
     display: block;
     font-weight: bold;
 }

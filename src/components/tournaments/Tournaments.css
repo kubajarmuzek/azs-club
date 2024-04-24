@@ -1,0 +1,37 @@
+.tournaments-container {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tournament-box {
+    padding: 20px;
+    width: 60%;
+    gap: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tournament-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.tournament-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.tournament-sign {
+    align-items: center;
+    width: 350px;
+}

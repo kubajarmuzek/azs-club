@@ -5,6 +5,8 @@ import Login from './components/login/Login';
 import Registration from './components/registration/Registration';
 import Landing from './components/landing/Landing';
 import AdminPage from './components/admin/AdminPage';
+import Sections from './components/sections/Sections';
+import Tournaments from './components/tournaments/Tournaments';
 
 const App = () => {
   return (
@@ -17,6 +19,8 @@ const App = () => {
         <Route path="/registration" element={<Registration/>} />
         <Route path="/landing" element={<Landing/>}/>
         <Route path="/adminPage" element={<AdminPage/>}/>
+        <Route path="/sections" element={<Sections/>}/>
+        <Route path="/tournaments" element={<Tournaments/>}/>
       </Routes>
       </section>
       </div>  

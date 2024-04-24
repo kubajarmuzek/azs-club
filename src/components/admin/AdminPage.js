@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { db } from "../../firebase";
 import { set, ref, push, onValue } from "firebase/database";
 import "./AdminPage.css";
@@ -216,12 +216,12 @@ function AdminPage() {
                     </div>
                     <button type="submit">Dodaj</button>
                     <ul>
-                    {rankings.map((player, index) => (
-                        <li key={index}>
-                            {player.imie} {player.nazwisko} - Punkty: {player.punkty}
-                        </li>
-                    ))}
-                </ul>
+                        {rankings.map((player, index) => (
+                            <li key={index}>
+                                {player.imie} {player.nazwisko} - Punkty: {player.punkty}
+                            </li>
+                        ))}
+                    </ul>
                 </form>
             </div>
         </div>

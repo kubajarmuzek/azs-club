@@ -27,7 +27,7 @@ function Header() {
                     <li><img src={logo} alt="Logo" /></li>
                     <li><NavLink to="/sections">Sekcja</NavLink></li>
                     <li><NavLink to="/tournaments">Turnieje</NavLink></li>
-                    <li><NavLink to="/">Ranking</NavLink></li>
+                    <li><NavLink to="/ranking">Ranking</NavLink></li>
                     <li><FontAwesomeIcon icon={faSignOutAlt} onClick={handleLogout}/></li>
                 </ul>
             </nav>

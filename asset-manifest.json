@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/meritoazs/static/css/main.64ba9237.css",
+    "main.js": "/meritoazs/static/js/main.76c53f57.js",
+    "static/js/453.d703fa8c.chunk.js": "/meritoazs/static/js/453.d703fa8c.chunk.js",
+    "static/media/logo.png": "/meritoazs/static/media/logo.c06ea1cefd6fa64f9fd8.png",
+    "index.html": "/meritoazs/index.html",
+    "main.64ba9237.css.map": "/meritoazs/static/css/main.64ba9237.css.map",
+    "main.76c53f57.js.map": "/meritoazs/static/js/main.76c53f57.js.map",
+    "453.d703fa8c.chunk.js.map": "/meritoazs/static/js/453.d703fa8c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.64ba9237.css",
+    "static/js/main.76c53f57.js"
+  ]
+}
